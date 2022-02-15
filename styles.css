@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+
+.fondo{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.fondo-tap{
+    background-color: rgb(70, 68, 68);
+    color: rgb(115, 222, 255);
+}
+
+.letra{
+    color: white;
+}
