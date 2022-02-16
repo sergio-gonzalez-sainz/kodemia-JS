@@ -122,6 +122,42 @@
                     <li>14-16 Bueno</li>
                     <li>17-20 Muy bueno</li>
                 </ul>
+                
+                <div class="accordion-body col-3 ">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Ingrese calificacion: </span>
+                        <input type="number" class="form-control " id="calificacion"  aria-label="Dollar amount (with dot and two decimal places)" onfocusout="descuento()" >
+                        <button type="button" id="botonCal" class="btn btn-success" onclick="calificaciones()" >agregar</button>
+                    </div>
+                </div>
+                <table class="table table-success tablaCal" wit>
+                    <thead>
+                        <tr>
+                          <th scope="col"># </th>
+                          <th colspan="2" scope="col">Calificacion</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td colspan="2" id="item-1"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td colspan="2" id="item-2" ></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td colspan="2" id="item-3" ></td>
+                        </tr>
+                        <tr>
+                            <td class="table-active" >Promedio</td>
+                            <td id="item-4"></td>
+                            <td id="item-5"></td>
+                        </tr>
+                      </tbody>
+                </table>
+                <div id="calificacion" ></div>
               </div>
             </div>
           </div>
@@ -161,12 +197,14 @@
             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <h4>Mostrar los 10 primeros elementos se la serie de Fibonacci</h4>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="">Ingresa la cantidad de números:</span>
+                    <input type="number" class="form-control"  aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
               </div>
             </div>
           </div>
     </div>
-
-
 
 
     <script src="main.js"></script>

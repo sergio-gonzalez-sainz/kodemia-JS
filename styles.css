@@ -3,7 +3,6 @@ body{
     color: white;
 }
 
-
 .fondo{
     background-color: rgb(39, 39, 39);
     color: white;
@@ -16,4 +15,11 @@ body{
 
 .letra{
     color: white;
+}
+
+.tablaCal{
+    margin-left: 54px;
+    text-align: center;
+    width: 15%;
+
 }

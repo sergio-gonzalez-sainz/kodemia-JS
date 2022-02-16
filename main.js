@@ -50,16 +50,47 @@ function descuento(){
         <span class="input-group-text">${descuento}</span>
         <input type="text" class="form-control" value = "${monto}" aria-label="Dollar amount (with dot and two decimal places)">
     `; 
-    } else if(monto<150 ){
+    } else if(monto<=150 ){
         document.getElementById("alert").innerHTML = ` `
         document.getElementById("des").innerHTML = `
         <div class="alert alert-warning" role="alert">
- No Hay Descuento
-</div>
-    `;  
+            No Hay Descuento
+        </div> 
+        `;  
     }
 }
 
-
+let cal;
+let vuelta=0;
+let prom = 0;
+function calificaciones(){
+    let califica = parseInt(document.getElementById("calificacion").value);
+    if(califica > -1 && califica <= 20 && califica != ""){
+        vuelta += 1;
+        prom += califica; 
+        if(vuelta == 3){
+            document.getElementById("botonCal").disabled = true;
+            prom = prom / 3;
+            document.getElementById("item-4").innerHTML = prom;
+            if(prom >=0 && prom <= 10){
+                document.getElementById("item-5").innerHTML = "Alumno Malo";
+            }else if(prom >=11 && prom <= 13){
+                document.getElementById("item-5").innerHTML = "Alumno Regular";
+            } else if(prom >=14 && prom <= 16){
+                document.getElementById("item-5").innerHTML = "Alumno Bueno";
+            } else if(prom >=17 && prom <= 20){
+                document.getElementById("item-5").innerHTML = "Alumno Muy Bueno";
+            }
+        }
+        document.getElementById("item-"+vuelta).innerHTML = califica;
+        document.getElementById("calificacion").value = "";
+        }else if (califica == ""){
+                    document.getElementById("calificacion").value = "";
+                    alert("El valor no puede estar vacio");
+            }else {
+                document.getElementById("calificacion").value = "";
+                alert("El valor debe ser entre 0 y 20");
+            }
+}
 
 
