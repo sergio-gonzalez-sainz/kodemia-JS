@@ -1,5 +1,5 @@
 
-
+//-----------------Ejercicio 1
 
 function cambiar(){
     let peso = document.getElementById("pesos").value;
@@ -9,6 +9,8 @@ function cambiar(){
     document.getElementById("dolares").innerHTML = ` ${dolares.toFixed(2)}`; 
 }
 
+
+//-----------------Ejercicio 2
 
 function login(){
     let usuario = document.getElementById("user").value ;
@@ -23,6 +25,9 @@ function login(){
         alert("No se encontro el usuario");
     }
 }
+
+//-----------------Ejercicio 3
+
 
 function descuento(){
 
@@ -59,7 +64,7 @@ function descuento(){
         `;  
     }
 }
-
+//-----------------Ejercicio 4
 let cal;
 let vuelta=0;
 let prom = 0;
@@ -92,5 +97,43 @@ function calificaciones(){
                 alert("El valor debe ser entre 0 y 20");
             }
 }
+
+//-----------------Ejercicio 5
+let multiplicador
+function multiplica(){
+    multiplicador = parseInt(document.getElementById("multiplicacion").value);
+    if(multiplicador<=0 || multiplicador >=13){
+        alert("El valor debe ser entre 1 y 12");
+    }else if(isNaN(multiplicador)){
+        alert("No puede estar vacio el campo");
+    } else {
+        circulos();
+    }
+    
+}
+function limpia(){
+    document.getElementById("nuevo").innerHTML = ` <code id="item"></code>`
+    document.getElementById("multiplicacion").value = "";
+    document.getElementById("multiBtn").disabled = false;
+    document.getElementById("nuevoBtn").disabled = true;
+}
+function circulos(){
+    for(let i=1 ; i<=9 ; i++){
+        //setTimeout(1000);
+        let valor= multiplicador*i ;
+        item.insertAdjacentHTML("beforebegin", 
+            `<div class="d-flex justify-content-center align-items-center circulo" >
+                <p>${valor}</p>
+            </div>`);
+    }
+    document.getElementById("nuevoBtn").disabled = false;
+    document.getElementById("multiBtn").disabled = true;
+}
+
+
+
+
+
+
 
 
