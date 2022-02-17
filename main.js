@@ -123,7 +123,7 @@ function circulos(){
         let valor= multiplicador*i ;
         item.insertAdjacentHTML("beforebegin", 
             `<div class="d-flex justify-content-center align-items-center circulo" >
-                <p>${valor}</p>
+                <p class="numeroItem">${valor}</p>
             </div>`);
     }
     document.getElementById("nuevoBtn").disabled = false;
