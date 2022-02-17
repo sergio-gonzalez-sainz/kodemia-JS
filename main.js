@@ -118,13 +118,15 @@ function limpia(){
     document.getElementById("nuevoBtn").disabled = true;
 }
 function circulos(){
+   
     for(let i=1 ; i<=9 ; i++){
-        //setTimeout(1000);
-        let valor= multiplicador*i ;
-        item.insertAdjacentHTML("beforebegin", 
-            `<div class="d-flex justify-content-center align-items-center circulo" >
+            let valor= multiplicador*i ;
+            setTimeout(() => {  console.log("World!"); }, 2000);
+            item.insertAdjacentHTML("beforebegin", 
+            `<div class="d-flex justify-content-center align-items-center shadow-lg circulo" >
                 <p class="numeroItem">${valor}</p>
             </div>`);
+            
     }
     document.getElementById("nuevoBtn").disabled = false;
     document.getElementById("multiBtn").disabled = true;
